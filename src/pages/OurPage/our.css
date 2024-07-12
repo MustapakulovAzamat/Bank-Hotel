@@ -1,0 +1,98 @@
+.our {
+    min-height: 100vh;
+    width: 100%;
+    background-color: #fff;
+    margin-top: calc(var(--index) * 5);
+    display: flex;
+    justify-content: center;
+}
+
+.our__content {
+  display: flex;
+  gap: calc(var(--index) * 6);
+}
+
+.our .title, .our .text {
+    color: #1B3B36;
+    font-weight: 100;
+}
+
+
+/* ЛЕВАЯ ЧАСТЬ БЛОКА */
+.our__left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.our__left .text{
+    text-transform: uppercase;
+}
+.our__left img{
+    width: calc(var(--index) * 15);
+}
+
+
+/* СРЕДНИЙ БЛОК ЗАГОЛОВКАМИ И ОПИСАНИЕМ */
+.our__info{
+    display: flex;
+    flex-direction: column;
+}
+.our__info .title {
+    font-size: calc(var(--index) * 6);
+    width: calc(var(--index) * 12);
+}
+
+.our__title {
+    display: flex;
+    margin-bottom: calc(var(--index) * 7);
+}
+.our__title img {
+    width: calc(var(--index) * 2);
+    margin: 0 calc(var(--index) * 5);
+}
+
+.our__desc {
+  display: flex;
+}
+
+
+
+/* ПРАВАЯ ЧАСТЬ БЛОКА  */
+.our__right img{
+    width: calc(var(--index) * 15);
+}
+
+
+@media screen and (max-width: 1055px) {
+    .our__right {
+        display: none;
+    }
+    .our__info .title {
+        font-size: calc(var(--index) * 4);
+    }
+    .our__title img {
+        margin: 0 calc(var(--index) * 3) ;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .our__content {
+        position: relative;
+        flex-direction: column;
+    }
+
+    .our__left div:nth-child(1) {
+        position: absolute;
+        top: calc(var(--index) * 7);
+        right: 0;
+    } 
+    .our__left div:nth-child(2){
+        position: absolute;
+        bottom: calc(var(--index) * 6);
+    } 
+
+    .our__info .our__desc {
+        margin-top: calc(var(--index) * 6);
+        width: calc(var(--index) * 20);
+    }
+}

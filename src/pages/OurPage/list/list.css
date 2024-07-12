@@ -1,0 +1,140 @@
+.list {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: calc(var(--index) * 1.5);
+    margin-top: calc(var(--index) * 5);
+}
+.list.changeList {
+    gap: calc(var(--index) * 9.5);
+    margin-top: calc(var(--index) * 9);
+}
+
+.list__item{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* КАРТИНКА */
+.list__item__img {
+    object-fit: cover;
+}
+.list__item__img img{
+    width: calc(var(--index) * 8);
+    transition: all 0.6s ease-in-out;
+}
+
+.list__item__img.changeImage {
+    position: absolute;
+    right: 0;
+}
+.list__item__img.changeImage img{
+    width: calc(var(--index) * 14);
+    transition: all 0.6s ease-in-out;
+}
+
+/* ЗАГОЛОВОК */
+.list__item__title {
+    display: flex;
+    gap: calc(var(--index) * 1.5);
+    transition: all 0.8s ease;
+}
+.list .title{
+    text-transform: none;
+    font-size: calc(var(--index) * 3);
+}
+
+
+.list__item__title.changeTitle{
+    flex-direction: column;
+    margin: 0 auto;
+    margin-bottom: calc(var(--index) * 1.5);
+    transition: all 0.8s ease;
+}
+
+
+
+/* ОПИСАНИЕ */
+.list__desc {
+    width: calc(var(--index) * 20);
+    margin: 0 auto;
+    opacity: 1;
+    transition: all 0.4s ease;
+    display: flex;
+}
+.list__desc.hidden {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -1;
+}
+
+
+/* АНИМАЦИЯ СТРЕЛОК */
+@keyframes rotateDown {
+    from {
+      transform: rotate(-90deg);
+    }
+    to {
+      transform: rotate(0deg);
+    }
+  }
+  
+  @keyframes rotateRight {
+    from {
+      transform: rotate(90deg);
+    }
+    to {
+      transform: rotate(0deg);
+    }
+  }
+  
+  .rotate-down {
+    animation: rotateDown 1s forwards;
+  }
+  
+  .rotate-right {
+    animation: rotateRight 1s forwards;
+  }
+  
+.rotate-down.changeArrow {
+    position: absolute;
+    left: 0;
+}
+
+.list .line {
+  margin: calc(var(--index) * 3) 0;
+}
+
+
+@media screen and (max-width: 850px) {
+  .list__item {
+    flex-direction: column;
+    position: relative;
+  }  
+  .list__item__title h2 {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  .list__item__img.changeImage {
+    position: initial;
+  }
+  .list__item__img.changeImage img {
+    width: calc(var(--index) * 20);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .list__item__title h2 {
+    left: calc(var(--index) * 22);
+  }
+  .list .rotate-down {
+    left: calc(var(--index) * -3);
+  }
+  .list .title {
+    font-size: calc(var(--index) * 2.5);
+  }
+}
