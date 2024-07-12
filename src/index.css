@@ -1,13 +1,75 @@
-body {
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+:root {
+  --index: calc(1vw + 1vh)
+}
+
+@font-face {
+  font-family: Miracle;
+  src: url(./assets/font/Miracle\ Personal\ use.otf);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Miracle, Arial;
+  font-weight: 400;
+}
+
+.container {
+  max-width: max-content;
+  padding: 0 10px;
+}
+
+button {
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+
+/* ЗАГОЛОВОК */
+.title {
+  font-size: calc(var(--index) * 8);
+  text-transform: uppercase;
+  color: #fff;
+  display: flex;
+}
+.title-yel {
+  font-size: calc(var(--index) * 8);
+  text-transform: uppercase;
+  color: rgba(252, 208, 67, 1);
+}
+
+
+/* ТЕКСТЫ И ОПИСАНИИ */
+.text {
+  font-family: Helvetica, Arial;
+  font-size: calc(var(--index) * .8);
+  font-weight: 200;
+  color: #fff;
+  line-height: 1.5;
+}
+.text-yel {
+  font-family: Helvetica, Arial;
+  font-size: calc(var(--index) * 1);
+  text-transform: uppercase;
+  color: rgba(252, 208, 67, 1);
+}
+
+/* КАРТИНКИ */
+img {
+  user-select: none;
+}
+
+.line {
+  width: 100%;
+  height: 1px;
+  background-color: #313F38;
 }
