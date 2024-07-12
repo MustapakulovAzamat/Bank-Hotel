@@ -1,0 +1,15 @@
+.button button {
+    color: #fff;
+    border: 1px solid #fff;
+    border-radius: calc(var(--index) * 1.5);
+    padding: calc(var(--index) * .5) calc(var(--index) * 1.5);
+    font-size: calc(var(--index) * .8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    width: max-content;
+}
+.button img {
+    width: calc(var(--index) * 1.4);
+}

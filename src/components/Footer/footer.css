@@ -1,0 +1,9 @@
+
+.footer {
+    display: flex;
+    justify-content: center;
+    margin:  calc(var(--index) * 5) 0 calc(var(--index) * 3);
+}
+.footer .text {
+    color: #1B3B36;
+}
