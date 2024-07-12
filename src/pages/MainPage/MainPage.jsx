@@ -45,7 +45,7 @@ export const MainPage = () => {
 
         <div className="main__info">
           <div className="main__num">
-            <span className="text-yel"><a href="tel">+38 032 297 50 20</a></span>
+            <span className="text-yel"><a href="tel:+38 032 297 50 20">+38 032 297 50 20</a></span>
             <span className="text"><a href="addres">8 Lystopadovoho Chynu,Lviv</a></span>
           </div>
 

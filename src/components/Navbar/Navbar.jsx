@@ -20,7 +20,7 @@ export const Navbar = () => {
             <Link><li>Conference hall</li></Link>
             <Link><li>Contacts</li></Link>
         </ul>
-        <a className={`tel ${isOpen ? 'open' : ''}`} href="tel">+38 032 297 50 20</a>
+        <a className={`tel ${isOpen ? 'open' : ''}`} href="tel:+38 032 297 50 20">+38 032 297 50 20</a>
     </nav>
   )
 }
